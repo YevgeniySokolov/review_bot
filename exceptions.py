@@ -10,7 +10,13 @@ class NotAuthenticated(Exception):
     pass
 
 
-class EndpointAccess(Exception):
-    """Недоступность эндпоинта."""
+class InternalServerError(Exception):
+    """Internal Server Error."""
+
+    pass
+
+
+class NoContent(Exception):
+    """No Content."""
 
     pass
