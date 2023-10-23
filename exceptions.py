@@ -1,22 +1,15 @@
-class UnknownError(Exception):
-    """Wrong from_date format."""
+class OtherStatusCode(Exception):
+    """Статус-код, отличный от 200."""
 
     pass
 
 
-class NotAuthenticated(Exception):
-    """Учетные данные не были предоставлены."""
+class APIRequestException(Exception):
+    """Сбой при запросе к API."""
 
     pass
 
-
-class InternalServerError(Exception):
-    """Internal Server Error."""
-
-    pass
-
-
-class NoContent(Exception):
-    """No Content."""
+class TelegramException(Exception):
+    """Сбой при отправке сообщения в Telegram."""
 
     pass
