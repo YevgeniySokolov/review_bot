@@ -128,16 +128,8 @@ def main():
             new_message = parse_status(homeworks[0])
             send_message(bot, new_message)
             timestamp = response['current_date']
-        except TypeError as err:
-            msg = err.args
-            logger.error(msg)
-        except KeyError as err:
-            msg = err.args
-            logger.error(msg)
-        except OtherStatusCode as err:
-            msg = err.args
-            logger.error(msg)
-        except ValueError as err:
+        except (TypeError, KeyError, OtherStatusCode, ValueError,
+                TelegramException) as err:
             msg = err.args
             logger.error(msg)
         except APIRequestException as err:
@@ -146,9 +138,6 @@ def main():
             if msg != message:
                 send_message(bot, msg)
                 message = msg
-        except TelegramException as err:
-            msg = err.args
-            logger.error(msg)
         except Exception as error:
             logger.error(f'Неожиданный сбой в работе программы: {error}')
         finally:
