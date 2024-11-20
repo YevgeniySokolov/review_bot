@@ -6,7 +6,6 @@
 
 За основу взята библиотека python-telegram-bot.
 
-*Автор проекта:*  
-Евгений Соколов  
+Автор проекта: Евгений Соколов  
 E-mail: ea.sokolov.87@yandex.ru  
-GitHub: https://github.com/YevgeniySokolov
+GitHub: [YevgeniySokolov](https://github.com/YevgeniySokolov)
